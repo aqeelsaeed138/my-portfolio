@@ -1,7 +1,6 @@
 import { lazy, Suspense, useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
-import AIAssistant from "./components/AIAssistant";
 
 // Lazy load heavy components for faster initial load
 const Background3D = lazy(() => import("./components/Background3D"));
@@ -61,10 +60,10 @@ const Preloader = ({ onComplete }) => {
       {/* Brand Name */}
       <h1 className="text-3xl font-bold text-white mb-2">
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-teal-500">
-          Sufyan Liaqat
+          Aqeel Saeed
         </span>
       </h1>
-      <p className="text-gray-400 text-sm mb-8 font-mono">Full-Stack Developer</p>
+      <p className="text-gray-400 text-sm mb-8 font-mono">Mern-Stack Developer</p>
 
       {/* Progress Bar */}
       <div className="w-64 h-1 bg-gray-800 rounded-full overflow-hidden">
@@ -101,7 +100,6 @@ const PageLoader = () => (
 function App() {
   const [isPreloading, setIsPreloading] = useState(true);
   const [show3D, setShow3D] = useState(false);
-  const [showAssistant, setShowAssistant] = useState(false);
   const [is3DVisible, setIs3DVisible] = useState(false);
 
   useEffect(() => {
@@ -113,14 +111,8 @@ function App() {
         setTimeout(() => setIs3DVisible(true), 100);
       }, 3000);
 
-      // Show AI Assistant after 4 seconds (appears with nice animation)
-      const timerAssistant = setTimeout(() => {
-        setShowAssistant(true);
-      }, 4000);
-
       return () => {
         clearTimeout(timer3D);
-        clearTimeout(timerAssistant);
       };
     }
   }, [isPreloading]);
@@ -146,8 +138,6 @@ function App() {
         </Suspense>
       )}
       
-      {/* AI Assistant - Shows after preloading */}
-      {!isPreloading && <AIAssistant />}
       
       <Toaster />
       <BrowserRouter>

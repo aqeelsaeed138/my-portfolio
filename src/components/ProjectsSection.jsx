@@ -38,7 +38,7 @@ export const ProjectsSection = () => {
           </h2>
 
           <p className="text-gray-300 text-base max-w-2xl mx-auto leading-relaxed">
-            Here are some of my recent projects showcasing expertise in full-stack development,
+            Here are some of my recent projects showcasing expertise in Mern-stack development,
             AI integration, and modern web technologies.
           </p>
 
@@ -211,7 +211,7 @@ export const ProjectsSection = () => {
           className="text-center mt-16"
         >
           <a
-            href="https://github.com/sufyan2618"
+            href="https://github.com/aqeelsaeed138"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-linear-to-r from-emerald-600 to-teal-600 hover:shadow-lg hover:shadow-emerald-500/40 rounded-full font-semibold text-white transition-all duration-300 hover:scale-105"

@@ -24,38 +24,31 @@ export const ContactSection = () => {
     message: ''
   });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-  
-    try {
-      const response = await fetch('https://formspree.io/f/xqabbeyp', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-  
-      if (response.ok) {
-        toast({
-          title: "Message sent successfully!",
-          description: "Thank you for reaching out. I'll get back to you within 24 hours.",
-        });
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        throw new Error('Failed to send message');
-      }
-    } catch (error) {
-      toast({
-        title: "Error sending message",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    // Simulate API call (you can replace with real backend later)
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    toast({
+      title: "Message sent successfully!",
+      description: "Thank you for reaching out. I'll get back to you within 24 hours.",
+    });
+
+    setFormData({ name: '', email: '', message: '' });
+
+  } catch (error) {
+    toast({
+      title: "Error sending message",
+      description: "Something went wrong. Please try again later.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const handleInputChange = (e) => {
     setFormData({
@@ -68,14 +61,14 @@ export const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "sufyanliaquat58@gmail.com",
-      href: "mailto:sufyanliaquat58@gmail.com"
+      value: "aqeelsaeed138@gmail.com",
+      href: "mailto:aqeelsaeed138@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+92 313 6487106",
-      href: "tel:+923136487106"
+      value: "+92 326 7972841",
+      href: "tel:+923267972841"
     },
     {
       icon: MapPin,
@@ -89,27 +82,21 @@ export const ContactSection = () => {
   const socialLinks = [
     { 
       icon: Github, 
-      href: "https://github.com/sufyan2618", 
+      href: "https://github.com/aqeelsaeed138", 
       label: "GitHub", 
       color: "hover:text-white"
     },
     { 
       icon: Linkedin, 
-      href: "https://www.linkedin.com/in/sufyanliaqat2", 
+      href: "https://www.linkedin.com/in/aqeelsaeed138/", 
       label: "LinkedIn", 
       color: "hover:text-blue-400"
     },
     { 
       icon: Instagram, 
-      href: "https://www.instagram.com/sufyan_liaquat1/", 
+      href: "https://www.instagram.com/aqeelsaeed12/", 
       label: "Instagram", 
       color: "hover:text-pink-400"
-    },
-    { 
-      icon: Facebook, 
-      href: "https://www.facebook.com/sufyan.liaquat.73", 
-      label: "Facebook", 
-      color: "hover:text-blue-500"
     },
   ];
 
@@ -133,8 +120,9 @@ export const ContactSection = () => {
           </h2>
           
           <p className="text-gray-300 text-base max-w-2xl mx-auto leading-relaxed">
-            Have a project in mind or want to collaborate? I'm always excited to discuss new opportunities 
-            and bring innovative ideas to life. Let's create something amazing together!
+            Have a project in mind or looking for a MERN Stack developer? I'm always open to 
+            opportunities where I can build scalable web applications, implement DevOps solutions, 
+            or work on AI-driven systems. Let’s connect and build something impactful!
           </p>
           
           <div className="w-20 h-1 bg-linear-to-r from-emerald-600 to-teal-600 rounded-full mx-auto mt-6" />

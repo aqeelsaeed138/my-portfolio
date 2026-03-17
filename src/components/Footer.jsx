@@ -10,9 +10,9 @@ export const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/sufyan2618", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/sufyanliaqat2", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:sufyan.li2618@gmail.com", label: "Email" }
+    { icon: Github, href: "https://github.com/aqeelsaeed138", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/aqeelsaeed138/", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:aqeelsaeed138@gmail.com", label: "Email" }
   ];
 
   const quickLinks = [
@@ -45,12 +45,11 @@ export const Footer = () => {
                   <Code className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-2xl font-bold bg-clip-text text-transparent bg-linear-to-r from-emerald-400 to-teal-500">
-                  Sufyan Liaqat
+                  Aqeel Saeed
                 </span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Full-Stack Developer crafting exceptional digital experiences with modern technologies. 
-                Building the future, one line of code at a time.
+                MERN Stack Developer specializing in scalable web applications, DevOps (Docker & Kubernetes), and AI-powered solutions. Turning ideas into production-ready systems.
               </p>
               <div className="flex items-center gap-2 text-emerald-400 text-sm">
                 <Sparkles className="w-4 h-4 animate-pulse" />
@@ -127,7 +126,7 @@ export const Footer = () => {
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <span>&copy; {new Date().getFullYear()}</span>
               <span className="text-emerald-500">•</span>
-              <span>Sufyan Liaqat</span>
+              <span>Aqeel Saeed</span>
               <span className="text-teal-500">•</span>
               <span>All rights reserved</span>
             </div>

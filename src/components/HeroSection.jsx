@@ -1,7 +1,7 @@
 import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
-import resume from "../assets/Sufyan_Liaqat_FullStack_Engineer.pdf"
+import resume from "../assets/Aqeel_Saeed_MernStack.pdf"
 
 const Typewriter = ({ text, delay = 0 }) => {
   const [displayText, setDisplayText] = useState('');
@@ -49,7 +49,7 @@ export const HeroSection = () => {
                 transition={{ delay: 0.2 }}
                 className="text-emerald-400 font-medium text-xs sm:text-sm tracking-[0.3em] uppercase font-mono"
               >
-                <Typewriter text="Full-Stack Developer" delay={0.5} />
+                <Typewriter text="MERN Stack Developer | DevOps | AI Enthusiast" delay={0.5} />
               </motion.div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display leading-[0.9] tracking-tight">
                 <motion.span 
@@ -61,7 +61,7 @@ export const HeroSection = () => {
                     fontWeight: 800
                   }}
                 >
-                  Sufyan
+                  Aqeel
                 </motion.span>
                 <br />
                 <motion.span 
@@ -73,7 +73,7 @@ export const HeroSection = () => {
                     filter: 'drop-shadow(0 0 20px rgba(16, 185, 129, 0.5))'
                   }}
                 >
-                  Liaqat
+                  Saeed
                 </motion.span>
               </h1>
             </div>
@@ -86,8 +86,9 @@ export const HeroSection = () => {
             >
               <div className="absolute -inset-1 bg-linear-to-r from-emerald-600 to-teal-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <p className="relative text-sm text-gray-300 leading-relaxed max-w-md mx-auto lg:mx-0 backdrop-blur-sm bg-black/30 p-3.5 rounded-lg border border-white/10">
-                Specialized in <span className="text-emerald-400 font-semibold">MERN Stack</span>, <span className="text-emerald-400 font-semibold">React Native</span>, and <span className="text-emerald-400 font-semibold">FastAPI</span>. 
-                Building scalable, production-ready applications with modern 3D interfaces.
+              I build scalable <span className="text-emerald-400 font-semibold">MERN stack</span> applications, 
+              deploy using <span className="text-emerald-400 font-semibold">Docker & Kubernetes</span>, 
+              and integrate <span className="text-emerald-400 font-semibold">AI-powered features</span> into real-world systems.
               </p>
             </motion.div>  
 
@@ -98,7 +99,7 @@ export const HeroSection = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-1.5 justify-center lg:justify-start"
             >
-              {['React', 'Node.js', 'MongoDB', 'TypeScript', 'FastAPI', 'React Native', 'Three.js'].map((tech, index) => (
+              {['React','Next.js','Node.js','MongoDB','PostgreSQL','Docker','Kubernetes','TypeScript','Firebase'].map((tech, index) => (
                 <motion.span 
                   key={tech}
                   whileHover={{ scale: 1.1, rotate: Math.random() * 10 - 5 }}
@@ -148,8 +149,8 @@ export const HeroSection = () => {
               className="flex gap-2.5 justify-center lg:justify-start"
             >
               {[
-                { icon: Github, href: "https://github.com/sufyan2618", label: "GitHub" },
-                { icon: Linkedin, href: "https://www.linkedin.com/in/sufyanliaqat2", label: "LinkedIn" },
+                { icon: Github, href: "https://github.com/aqeelsaeed138", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/aqeelsaeed138/", label: "LinkedIn" },
                 { icon: Download, href: resume, label: "Resume", download: true },
               ].map(({ icon: Icon, href, label, download }) => (
                 <motion.a
@@ -188,8 +189,8 @@ export const HeroSection = () => {
                 <div className="w-full h-full rounded-full overflow-hidden border-4 border-white/10 shadow-2xl shadow-emerald-500/20 relative group">
                   <div className="absolute inset-0 bg-emerald-500/20 opacity-0 transition-opacity duration-300 z-20"></div>
                   <img
-                    src='./hero.webp'
-                    alt="Sufyan Liaqat"
+                    src='./hero.jpeg'
+                    alt="Aqeel Saeed"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="eager"
                   />

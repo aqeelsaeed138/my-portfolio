@@ -1,6 +1,6 @@
-import { Code, Smartphone, Brain, ArrowRight } from "lucide-react";
+import { Code, Cloud, Brain, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import resume from "../assets/Sufyan_Liaqat_FullStack_Engineer.pdf"
+import resume from "../assets/Aqeel_Saeed_MernStack.pdf";
 import { aboutSkills } from "@/lib/data";
 
 export const AboutSection = () => {
@@ -10,6 +10,7 @@ export const AboutSection = () => {
       className="relative min-h-screen py-20 px-4 overflow-hidden"
     >
       <div className="container mx-auto max-w-6xl relative z-10">
+
         {/* Section Header */}
         <motion.div 
           initial={{ opacity: 0 }}
@@ -28,7 +29,7 @@ export const AboutSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           
-          {/* Left Content - About Text */}
+          {/* LEFT SIDE */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -37,30 +38,42 @@ export const AboutSection = () => {
             className="space-y-6"
           >
             
-            {/* Main Description Card */}
+            {/* MAIN CARD */}
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-emerald-500/50 transition-all duration-300 shadow-lg">
                 
                 <h3 className="text-xl font-heading text-white mb-4 flex items-center gap-2">
                   <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-                  Software Engineering Student & Developer
+                  MERN Stack Developer & Software Engineer
                 </h3>
 
                 <div className="space-y-4 text-gray-300 leading-relaxed">
                   <p>
-                    As a passionate software engineering student from <span className="text-emerald-400 font-semibold">Lahore, Punjab</span>, 
-                    I'm dedicated to crafting innovative digital solutions that solve real-world problems.
+                    I'm a final-year Software Engineering student at 
+                    <span className="text-emerald-400 font-semibold"> COMSATS University Islamabad</span>, 
+                    specializing in building scalable full-stack web applications using the MERN stack.
                   </p>
                   
                   <p>
-                    I believe in clean code, elegant design, and user-centered thinking. Whether building web applications, 
-                    mobile apps, or cloud solutions, I approach each project with <span className="text-emerald-400 font-semibold">creativity</span> and 
-                    <span className="text-emerald-400 font-semibold"> precision</span>.
+                    I have hands-on experience developing production-ready applications with 
+                    <span className="text-emerald-400 font-semibold"> React, Node.js, and modern backend systems</span>, 
+                    along with deploying them using 
+                    <span className="text-emerald-400 font-semibold"> Docker and Kubernetes</span>.
+                  </p>
+
+                  <p>
+                    Currently, I am expanding my expertise in 
+                    <span className="text-emerald-400 font-semibold"> DevOps and AI/NLP</span>, 
+                    working on intelligent systems involving document processing, text analysis, and machine learning models.
                   </p>
                 </div>
 
-                {/* Tech Stack Tags */}
+                {/* TECH TAGS */}
                 <div className="flex flex-wrap gap-2 mt-6">
-                  {['React', 'Node.js', 'MongoDB', 'Express', 'React Native', 'FastAPI', 'Python'].map((tech, index) => (
+                  {[
+                    'React', 'Node.js', 'MongoDB', 'Express',
+                    'TypeScript', 'Docker', 'Kubernetes',
+                    'Supabase', 'PostgreSQL', 'NLP'
+                  ].map((tech) => (
                     <span 
                       key={tech}
                       className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 hover:border-emerald-500 hover:text-emerald-400 hover:bg-emerald-500/10 transition-all duration-300 hover:scale-110"
@@ -71,11 +84,11 @@ export const AboutSection = () => {
                 </div>
               </div>
 
-            {/* CTA Buttons */}
+            {/* BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="#contact"
-                className="group px-6 py-3 bg-linear-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 rounded-md font-semibold text-white transition-all duration-300 text-center shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:scale-105"
+                className="group px-6 py-3 bg-linear-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 rounded-md font-semibold text-white transition-all duration-300 text-center shadow-lg hover:scale-105"
               >
                 <span className="flex items-center justify-center gap-2">
                   Get In Touch
@@ -98,7 +111,7 @@ export const AboutSection = () => {
             </div>
           </motion.div>
 
-          {/* Right Content - Skills Cards */}
+          {/* RIGHT SIDE (Skills Cards stays same) */}
           <div className="space-y-4">
             {aboutSkills.map((skill, index) => {
               const Icon = skill.icon;
@@ -111,29 +124,27 @@ export const AboutSection = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-5 hover:border-emerald-500/50 hover:bg-white/10 transition-all duration-300 hover:scale-105"
                 >
-                    <div className="flex items-start gap-4">
-                      {/* Icon Container */}
-                      <div className="p-3 rounded-lg bg-linear-to-br from-emerald-600 to-teal-600 shrink-0 shadow-lg shadow-emerald-500/20">
-                        <Icon className="w-6 h-6 text-white" />
-                      </div>
-
-                      {/* Content */}
-                      <div className="flex-1 min-w-0">
-                        <h4 className="text-lg font-bold text-white mb-2">
-                          {skill.title}
-                        </h4>
-                        <p className="text-gray-400 leading-relaxed">
-                          {skill.description}
-                        </p>
-                      </div>
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-lg bg-linear-to-br from-emerald-600 to-teal-600">
+                      <Icon className="w-6 h-6 text-white" />
                     </div>
-                  </motion.div>
+
+                    <div>
+                      <h4 className="text-lg font-bold text-white mb-2">
+                        {skill.title}
+                      </h4>
+                      <p className="text-gray-400">
+                        {skill.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
               );
             })}
           </div>
+
         </div>
       </div>
     </section>
   );
 };
-
