@@ -120,7 +120,9 @@ function App() {
   return (
     <>
       {/* Preloader */}
-      {isPreloading && <Preloader onComplete={() => setIsPreloading(false)} />}
+      {isPreloading ? (
+  <Preloader onComplete={() => setIsPreloading(false)} />
+) : null}
       
       {/* Static background shown immediately, replaced by 3D later */}
       {!show3D && <StaticBackground />}

@@ -2,14 +2,13 @@
 
 @layer base {
   html, body {
-    @apply bg-transparent text-white overflow-x-hidden;
-    overscroll-behavior: none;
-    -webkit-overscroll-behavior: none;
-    /* Improve scrolling performance on mobile */
-    -webkit-overflow-scrolling: touch;
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    letter-spacing: -0.01em;
-  }
+  @apply bg-transparent text-white overflow-x-hidden;
+  /* REMOVE THESE ↓ */
+  /* overscroll-behavior: none; */
+  /* -webkit-overscroll-behavior: none; */
+
+  -webkit-overflow-scrolling: touch;
+}
   
   #root {
     @apply min-h-screen relative;
